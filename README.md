@@ -4,7 +4,6 @@ CocoaTags --标签展示
 ![image](image/CocoaTag.gif)
 
 ###使用方法
-
 #### 1、根据数组初始化
  ```objective-c
   NSArray *array = @[@"123",@"德玛西亚",@"扭曲丛林",@"百度",@"阿里巴巴",@"Cocoa",@"洁白月光",@"秦时明月",@"花草",@"大圣归来",@"你在干嘛呢",@"碉堡了",@"然并卵",@"纯则脆，阳则钢"];
@@ -13,7 +12,6 @@ CocoaTags --标签展示
     [tagsView setTagsWithTagsArray:array];
 
 ```
-
 
 ####2、更新tags
 
