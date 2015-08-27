@@ -32,6 +32,7 @@
     float tags_W = 0;
     float tags_H = 0;
     for (NSString *tags in tagsArray) {
+        if (tags.length >0) {
         CocoaTagLabel *label = [[CocoaTagLabel alloc] initWithFrame:CGRectMake(tags_W + 5, tags_H, 0, 0)];
         label.clipsToBounds = YES;
         label.textColor = [UIColor whiteColor];
@@ -46,17 +47,18 @@
             label.frame = CGRectMake(tags_W + 5, tags_H, label.frame.size.width, label.frame.size.height);
             tags_W = tags_W + CGRectGetWidth(label.bounds)+5;
         }
-        
+#warning 可以在此处修改颜色
+     
         NSArray *colorArray = COLOR_ARRAY;
         label.backgroundColor = colorArray[arc4random()%11];
         
 
         [self addSubview:label];
        
-    }
+}
     _tags_W = tags_W;
     _tags_H = tags_H;
-    
+    }
 }
 
 
@@ -65,25 +67,29 @@
     
     
     for (NSString *tags in tagsArray) {
-        CocoaTagLabel *label = [[CocoaTagLabel alloc] initWithFrame:CGRectMake(_tags_W + 5, _tags_H, 0, 0)];
-        label.clipsToBounds = YES;
-        label.textColor = [UIColor whiteColor];
-        label.layer.cornerRadius = 6;
-        label.textAlignment = NSTextAlignmentCenter;
-        label.text = tags;
-        _tags_W = _tags_W + CGRectGetWidth(label.bounds)+5;
-        if (_tags_W > CGRectGetWidth(self.bounds)) {
-            _tags_H += CGRectGetHeight(label.bounds) + 5;
-            _tags_W = 0;
-            label.frame = CGRectMake(_tags_W + 5, _tags_H, label.frame.size.width, label.frame.size.height);
+        if (tags.length >0) {
+            CocoaTagLabel *label = [[CocoaTagLabel alloc] initWithFrame:CGRectMake(_tags_W + 5, _tags_H, 0, 0)];
+            label.clipsToBounds = YES;
+            label.textColor = [UIColor whiteColor];
+            label.layer.cornerRadius = 6;
+            label.textAlignment = NSTextAlignmentCenter;
+            label.text = tags;
+            
             _tags_W = _tags_W + CGRectGetWidth(label.bounds)+5;
-        }
+            if (_tags_W > CGRectGetWidth(self.bounds)) {
+                _tags_H += CGRectGetHeight(label.bounds) + 5;
+                _tags_W = 0;
+                label.frame = CGRectMake(_tags_W + 5, _tags_H, label.frame.size.width, label.frame.size.height);
+                _tags_W = _tags_W + CGRectGetWidth(label.bounds)+5;
+            }
 #warning 可以在此处修改颜色
-        NSArray *colorArray = COLOR_ARRAY;
-        label.backgroundColor = colorArray[arc4random()%11];
-        
-        
-        [self addSubview:label];
+            NSArray *colorArray = COLOR_ARRAY;
+            label.backgroundColor = colorArray[arc4random()%11];
+            
+            
+            [self addSubview:label];
+;
+        }
         
     }
     
