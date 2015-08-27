@@ -51,7 +51,6 @@
      
         NSArray *colorArray = COLOR_ARRAY;
         label.backgroundColor = colorArray[arc4random()%11];
-        
 
         [self addSubview:label];
        

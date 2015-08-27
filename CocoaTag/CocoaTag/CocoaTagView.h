@@ -15,6 +15,7 @@
 
 
 - (void)setTagsWithTagsArray:(NSArray *)tagsArray;
+//增加tag
 - (void)updateTags:(NSArray *)tagsArray;
 
 
