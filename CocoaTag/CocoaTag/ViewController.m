@@ -61,17 +61,41 @@
         return;
     }
     
+    
+    //============把textFiled中的文字转成array=========
     NSMutableArray * array = [NSMutableArray array];
-    if ([_textFiled.text rangeOfString:@","].length > 0 ) {
-        array = [NSMutableArray arrayWithArray:[_textFiled.text componentsSeparatedByString:@","]];
-    }
-    else if ([_textFiled.text rangeOfString:@"，"].length > 0 ) {
-        array = [NSMutableArray arrayWithArray:[_textFiled.text componentsSeparatedByString:@"，"]];
+   //既有中文都好，又有英文逗号
+    if ([_textFiled.text rangeOfString:@","].length > 0 && [_textFiled.text rangeOfString:@"，"].length > 0 ) {
+        
+        NSArray *arrayOne = [_textFiled.text componentsSeparatedByString:@","];
+        for (NSString *str in arrayOne) {
+            if ([str rangeOfString:@"，"].length > 0) {
+                NSArray *arrayTwo = [str componentsSeparatedByString:@"，"];
+                [array addObjectsFromArray:arrayTwo];
+            }
+            else{
+                NSMutableArray *arrayThree = [NSMutableArray arrayWithArray:@[str]];
+                [array addObjectsFromArray:arrayThree];
+            }
+            
+        }
     }
     else{
-        array = [NSMutableArray arrayWithArray:@[_textFiled.text]];
-
+        //    字符串中有英文逗号
+        if ([_textFiled.text rangeOfString:@","].length > 0 ) {
+            array = [NSMutableArray arrayWithArray:[_textFiled.text componentsSeparatedByString:@","]];
+        }
+        //    字符串中有中文逗号
+        else if ([_textFiled.text rangeOfString:@"，"].length > 0 ) {
+            array = [NSMutableArray arrayWithArray:[_textFiled.text componentsSeparatedByString:@"，"]];
+        }
+        else{
+            array = [NSMutableArray arrayWithArray:@[_textFiled.text]];
+            
+        }
     }
+
+    //=========================
     
     [_tagsView updateTags:array];
     
