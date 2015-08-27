@@ -65,11 +65,7 @@
     if ([_textFiled.text rangeOfString:@","].length > 0 ) {
         array = [NSMutableArray arrayWithArray:[_textFiled.text componentsSeparatedByString:@","]];
     }
-    else{
-        array = [NSMutableArray arrayWithArray:@[_textFiled.text]];
-    }
-    
-    if ([_textFiled.text rangeOfString:@"，"].length > 0 ) {
+    else if ([_textFiled.text rangeOfString:@"，"].length > 0 ) {
         array = [NSMutableArray arrayWithArray:[_textFiled.text componentsSeparatedByString:@"，"]];
     }
     else{
