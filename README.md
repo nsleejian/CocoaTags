@@ -13,7 +13,7 @@ CocoaTags --标签展示
 
 ```
 
-####2、更新tags
+####2、增加tags
 
 ```onjective-c
   [_tagsView updateTags:array];
