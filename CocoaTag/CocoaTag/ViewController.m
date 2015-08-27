@@ -22,13 +22,13 @@
     
 
     
-    NSArray *array = @[@"123",@"德玛西亚",@"扭曲丛林",@"百度",@"阿里巴巴",@"Cocoa",@"洁白月光",@"秦时明月",@"花草",@"大圣归来",@"你在干嘛呢",@"碉堡了",@"然并卵",@"纯则脆，阳则钢"];
+    NSArray *array = @[@"123",@"德玛西亚",@"洁白月光",@"秦时明月",@"花草",@"大圣归来",@"你在干嘛呢",@"碉堡了",@"然并卵",@"纯则脆，阳则钢"];
     _tagsArray = [NSMutableArray arrayWithArray:array];
     
     
     CocoaTagView *tagsView = [[CocoaTagView alloc] initWithFrame:CGRectMake(0, 20,CGRectGetWidth(self.view.bounds), 200)];
     [self.view addSubview:tagsView];
-//    [tagsView setTagsWithTagsArray:array];
+    [tagsView setTagsWithTagsArray:array];
     _tagsView = tagsView;
     
     
@@ -37,6 +37,7 @@
     UITextField *textFiled = [[UITextField alloc] initWithFrame:CGRectMake(30, CGRectGetHeight(self.view.bounds) - 360, CGRectGetWidth(self.view.bounds) - 60, 60)];
     textFiled.backgroundColor = [UIColor colorWithRed:255/255.0 green:247/255.0 blue:217/255.0 alpha:1];
     [textFiled becomeFirstResponder];
+    textFiled.delegate =self;
     textFiled.placeholder = @"标签用 “，”隔开";
     [self.view addSubview:textFiled];
     _textFiled = textFiled;
@@ -78,7 +79,12 @@
     
     [_tagsView updateTags:array];
     
-    
+    _textFiled.text = @"";
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [self.view endEditing:YES ];
+    return YES;
 }
 
 
