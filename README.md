@@ -1,5 +1,8 @@
 # CocoaTags
 CocoaTags --标签展示
+###效果展示
+![image](image/CocoaTag.gif)
+
 ###使用方法
 
 #### 1、根据数组初始化
@@ -18,4 +21,3 @@ CocoaTags --标签展示
   [_tagsView updateTags:array];
 ````
 
-![image](image/CocoaTag.gif)
