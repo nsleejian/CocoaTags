@@ -8,6 +8,7 @@
 
 
 
+//可以在这里修改颜色
 #define COLOR_ARRAY @[[UIColor colorWithRed:239/255.0 green:43/255.0 blue:41/255.0 alpha:1],\
                     [UIColor colorWithRed:225/255.0 green:0/255.0 blue:81/255.0 alpha:1],\
                     [UIColor colorWithRed:137/255.0 green:0/255.0 blue:161/255.0 alpha:1],\
@@ -70,7 +71,6 @@
         label.layer.cornerRadius = 6;
         label.textAlignment = NSTextAlignmentCenter;
         label.text = tags;
-        label.backgroundColor = [UIColor redColor];
         _tags_W = _tags_W + CGRectGetWidth(label.bounds)+5;
         if (_tags_W > CGRectGetWidth(self.bounds)) {
             _tags_H += CGRectGetHeight(label.bounds) + 5;
@@ -78,7 +78,7 @@
             label.frame = CGRectMake(_tags_W + 5, _tags_H, label.frame.size.width, label.frame.size.height);
             _tags_W = _tags_W + CGRectGetWidth(label.bounds)+5;
         }
-        
+#warning 可以在此处修改颜色
         NSArray *colorArray = COLOR_ARRAY;
         label.backgroundColor = colorArray[arc4random()%11];
         

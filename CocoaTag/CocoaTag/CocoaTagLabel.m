@@ -19,6 +19,7 @@
 
 - (void)setText:(NSString *)text{
 
+#warning 可以在此处修改文字大小
     super.text = text;
     CGSize size = [self.text sizeWithFont:self.font constrainedToSize:CGSizeMake(CGRectGetWidth([UIScreen mainScreen].bounds), MAX_SIZE_HEIGHT) lineBreakMode:NSLineBreakByCharWrapping];
     self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, size.width + 30, size.height + 20);
