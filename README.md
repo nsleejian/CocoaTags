@@ -6,7 +6,9 @@ CocoaTags --标签展示
 ###使用方法
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-```platform :ios, '7.0'
+###Platform file
+```
+platform :ios, '7.0'
 
 pod 'CocoaTag', '~> 0.1.0'
 ```
