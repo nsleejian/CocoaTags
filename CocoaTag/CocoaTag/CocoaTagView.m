@@ -48,7 +48,7 @@
             label.frame = CGRectMake(tags_W + 5, tags_H, label.frame.size.width, label.frame.size.height);
             tags_W = tags_W + CGRectGetWidth(label.bounds)+5;
         }
-#warning 可以在此处修改颜色
+//#warning 可以在此处修改颜色
      
         NSArray *colorArray = COLOR_ARRAY;
         label.backgroundColor = colorArray[arc4random()%11];
@@ -82,7 +82,7 @@
                 label.frame = CGRectMake(_tags_W + 5, _tags_H, label.frame.size.width, label.frame.size.height);
                 _tags_W = _tags_W + CGRectGetWidth(label.bounds)+5;
             }
-#warning 可以在此处修改颜色
+//#warning 可以在此处修改颜色
             NSArray *colorArray = COLOR_ARRAY;
             label.backgroundColor = colorArray[arc4random()%11];
             
