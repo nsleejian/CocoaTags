@@ -10,17 +10,17 @@
 
 //可以在这里修改颜色
 #define COLOR_ARRAY @[[UIColor colorWithRed:239/255.0 green:43/255.0 blue:41/255.0 alpha:1],\
-                    [UIColor colorWithRed:225/255.0 green:0/255.0 blue:81/255.0 alpha:1],\
-                    [UIColor colorWithRed:137/255.0 green:0/255.0 blue:161/255.0 alpha:1],\
-                    [UIColor colorWithRed:83/255.0 green:33/255.0 blue:168/255.0 alpha:1],\
-                    [UIColor colorWithRed:48/255.0 green:58/255.0 blue:165/255.0 alpha:1],\
-                    [UIColor colorWithRed:30/255.0 green:127/255.0 blue:239/255.0 alpha:1],\
-                    [UIColor colorWithRed:19/255.0 green:150/255.0 blue:240/255.0 alpha:1],\
-                    [UIColor colorWithRed:22/255.0 green:175/255.0 blue:202/255.0 alpha:1],\
-                    [UIColor colorWithRed:153/255.0 green:133/255.0 blue:7/255.0 alpha:1],\
-                    [UIColor colorWithRed:122/255.0 green:187/255.0 blue:58/255.0 alpha:1],\
-                    [UIColor colorWithRed:251/255.0 green:63/255.0 blue:27/255.0 alpha:1]\
-                    ];
+                     [UIColor colorWithRed:225/255.0 green:0/255.0 blue:81/255.0 alpha:1],\
+                     [UIColor colorWithRed:137/255.0 green:0/255.0 blue:161/255.0 alpha:1],\
+                     [UIColor colorWithRed:83/255.0 green:33/255.0 blue:168/255.0 alpha:1],\
+                     [UIColor colorWithRed:48/255.0 green:58/255.0 blue:165/255.0 alpha:1],\
+                     [UIColor colorWithRed:30/255.0 green:127/255.0 blue:239/255.0 alpha:1],\
+                     [UIColor colorWithRed:19/255.0 green:150/255.0 blue:240/255.0 alpha:1],\
+                     [UIColor colorWithRed:22/255.0 green:175/255.0 blue:202/255.0 alpha:1],\
+                     [UIColor colorWithRed:153/255.0 green:133/255.0 blue:7/255.0 alpha:1],\
+                     [UIColor colorWithRed:122/255.0 green:187/255.0 blue:58/255.0 alpha:1],\
+                     [UIColor colorWithRed:251/255.0 green:63/255.0 blue:27/255.0 alpha:1]\
+                     ];
 
 
 #import "CocoaTagView.h"
