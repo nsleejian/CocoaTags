@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
    s.name         = "CocoaTag"
-   s.version      = "0.0.9"
+   s.version      = "0.1.0"
    s.summary      = "The package of useful tools, include categories and classes"
    s.homepage     = "https://github.com/thebookofleaves/CocoaTags"
    s.license      = "MIT"
