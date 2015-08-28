@@ -29,6 +29,7 @@
 
 
 - (void)setTagsWithTagsArray:(NSArray *)tagsArray{
+//    self.backgroundColor = [UIColor redColor];
     float tags_W = 0;
     float tags_H = 0;
     for (NSString *tags in tagsArray) {

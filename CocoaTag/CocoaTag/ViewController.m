@@ -34,7 +34,7 @@
     
     
     
-    UITextField *textFiled = [[UITextField alloc] initWithFrame:CGRectMake(30, CGRectGetHeight(self.view.bounds) - 360, CGRectGetWidth(self.view.bounds) - 60, 60)];
+    UITextField *textFiled = [[UITextField alloc] initWithFrame:CGRectMake(30, CGRectGetHeight(self.view.bounds) - 348, CGRectGetWidth(self.view.bounds) - 60, 40)];
     textFiled.backgroundColor = [UIColor colorWithRed:255/255.0 green:247/255.0 blue:217/255.0 alpha:1];
     [textFiled becomeFirstResponder];
     textFiled.delegate =self;
