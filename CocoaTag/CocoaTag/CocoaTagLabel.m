@@ -20,8 +20,6 @@
 - (void)setText:(NSString *)text{
 
     super.text = text;
-//    CGSize size = [self.text sizeWithFont:self.font constrainedToSize:CGSizeMake(CGRectGetWidth([UIScreen mainScreen].bounds), MAX_SIZE_HEIGHT) lineBreakMode:NSLineBreakByCharWrapping];
-//    
     
     CGSize size = [self.text boundingRectWithSize:CGSizeMake(MAXFLOAT, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17]} context:nil].size;
     
