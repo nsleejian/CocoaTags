@@ -10,7 +10,7 @@ CocoaTags --标签展示
 ```
 platform :ios, '7.0'
 
-pod 'CocoaTag', '~> 0.1.0'
+pod 'CocoaTag', '~> 0.1.1'
 ```
 
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
