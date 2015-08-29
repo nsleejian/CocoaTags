@@ -6,7 +6,7 @@ CocoaTags --标签展示
 ###使用方法
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-###Platform file
+###podfile
 ```
 platform :ios, '7.0'
 
